@@ -18,4 +18,11 @@ export class CardComponent {
     const value = (<HTMLInputElement>target).value;
     this.textLength = value;
   }
+
+  onComparison(randomLetter: string, enteredLetter: string){
+    if(!enteredLetter){
+      return 'pending';
+    }
+    return enteredLetter === randomLetter ? 'correct' : 'incorrect';
+  }
 }
